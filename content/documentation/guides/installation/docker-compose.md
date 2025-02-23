@@ -7,7 +7,7 @@ lastmod: 2024-05-24
 weight: 2
 ---
 
-This guide shows you how to install and run Microcks using Docker Compose.
+This guide shows you how to instaall and run Microcks using Docker Compose.
 
 [Docker Compose](https://docs.docker.com/compose/) is a tool for easily testing and running multi-container applications. [Microcks](https://microcks.io/) offers a simple way to set up the minimal required containers to have a functional environment on your local computer.
 
