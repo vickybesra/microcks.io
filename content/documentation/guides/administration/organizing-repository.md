@@ -11,7 +11,7 @@ weight: 1
 
 This guide walks through the different techniques for organinzing your API & Services repository content in Microcks. As you import more and more artifacts into Microcks, it can be come difficult to find the API you're looking for! Microcks proposes handling by putting `labels` 🏷️ on **APIs & Services** or **Importer Jobs** of your repository. Labels are a very flexible way to map your own organizational structures with loose coupling. 
 
-This guide will show **3 techniques** that are using labels to enhance the organization of your repository. These techniiiques are progressive and you decide applying the first one without pursuing on others. However, applying the third ones requires to have adopted the previous ones.
+This guide will show **3 techniques** that are using labels to enhance the organization of your repository. These techniques are progressive and you decide applying the first one without pursuing on others. However, applying the third ones requires to have adopted the previous ones.
 
 1️⃣ We will **apply labels** labels to different objects in order to add categorization informations,
 
