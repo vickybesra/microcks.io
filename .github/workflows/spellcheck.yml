@@ -1,0 +1,32 @@
+name: Spell Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  misspell:
+    name: Run misspell via reviewdog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Run misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          locale: "US"                 # Use "US" or "UK" as needed
+          level: "warning"             # Report level: info, warning, or error
+          reporter: "github-pr-check"  # Reporter type: github-pr-check or github-pr-review
+          ignore: "armor,color"        # Comma-separated list of words to ignore
+          path: |
+            content/documentation     # Base directory to run misspell
+          pattern: |
+            *.md                      # File patterns to check (one per line)
+          exclude: |
+            ./.git/*
+            ./.cache/*               # Exclude these directories
+          filter_mode: "added"        # Only check added lines; options: added, diff_context, file, nofilter
+          fail_level: "none"          # If "none", always exit with 0; otherwise exit 1 for issues above specified level
